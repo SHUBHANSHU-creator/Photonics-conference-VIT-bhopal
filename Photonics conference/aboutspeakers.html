@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name=”viewport” content=”width=device-width, initial-scale=1″>
+<title>about speakers</title>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link rel="stylesheet" href="newstyle.css">
+</head>
+<body>
+<div id="navbar"style="border-bottom: 1px solid white;" >
+  <a href="mainpage.html">main page</a>
+  <a href="photonics.html">about photonics</a>
+  <a class="active" href="aboutevent.html">photohon 2021</a>
+  <a href="http://tinyurl.com/2mauyc2e">register now</a>
+  <a class="active" href="aboutspeakers.html">about speakers</a>
+  <a href="contact us.html">Contact us</a>
+  <a href="updates.html">updates</a>
+  <p><img class ="logo" src="image/8.png" height="40px"></p>
+</div>
+
+<div class="content">
+    <div class="portfolio-items-wrapper">
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(image/1.png)"></div>
+          <div class="img-text-wrapper">
+            <div class="subtitle">Sir is Associate Professor in the Department of Mechanical Engineering , Indian Institute Of Technology, Bombay. His research focuses on Heat and Mass Transfer, Two Phase Flows, Bioheat Transfer, Optical Techniques for Whole Field Measurements Optical Tomography, Crystal Growth, Biomedical Applications of Lasers.</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(image/2.png)"></div>
+          <div class="img-text-wrapper">
+            <div class="subtitle"> Sir is working as a researcher in university of Glasgow since 2014. His research focuses on Flexible and Printable Electronics and Photonics devices, Electronic Skin, Understanding of the Fundamental issues related to Flexible Electronics, and Orient the same towards new applications.</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(image/3.png)"></div>
+          <div class="img-text-wrapper">
+            <div class="subtitle">Sir has a PHD in Interferometric Observation of Shockwaves induced by laser-produced plasma in a medium, jointly from IIT Bombay (India) and Monash University (Australia). He has got over 10 years of research experience in the domain of optics and optical instrumentation. He has worked across institutions during his PhD and post-doctoral research tenure. He has founded Iota Design and Innovations Lab Private Limited in Gandhinagar, Gujarat. He is working on projects in  </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(image/4.png)"></div>
+          <div class="img-text-wrapper">
+            <div class="subtitle"> Sir is Vice Chancellor at S R University, Warangal, AP. Before the current position, Dr. Reddy served as, Director of NIT Calicut & NIT Goa, Director In-charge of NIT, Warangal during the period 2005-2017, Mentor Director of NIT Sikkim, IIIT Kottayam & NIT Andhra Pradesh and Vice-Chancellor of Sharda University.</div>
+          </div>
+        </div>
+      </div>
+      <div class="last">
+        <div class="portfolio-item-wrapper" style="align-content: center; justify-content: center;">
+        <div class="portfolio-img-background" style="background-image:url(image/5.png)"></div>
+        <div class="img-text-wrapper" style="width: 75%;left: 5%;">
+          <div class="subtitle">Sir is Assistant Professor in the Department of Chemical Engineering, Indian Institute of Technology, Jammu. His research focuses on Non-Continuum Energy and Mass Diffusion studies , Physical behaviour and Dynamics of Glass, Gel, and Sol forming Colloidal Suspensions. Development of Optical Techniques for Engineering and Bio-medical applications. Applications of Optical Sensing Techniques for Transport Phenomena studies.</div>
+        </div>
+      </div>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+    
+      portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+          console.log(portfolioItem.childNodes[1].classList)
+          portfolioItem.childNodes[1].classList.add('image-blur');
+        });
+    
+        portfolioItem.addEventListener('mouseout', () => {
+          console.log(portfolioItem.childNodes[1].classList)
+          portfolioItem.childNodes[1].classList.remove('image-blur');
+        });
+      });
+</script>
+
+</body>
+</html>
